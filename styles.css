@@ -1114,33 +1114,33 @@ USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
 /* It's supposed to look like a tree diagram. */
-.tree,
-.tree ul,
-.tree li {
+.stack-tree,
+.stack-tree ul,
+.stack-tree li {
     list-style: none;
     margin: 0;
     padding: 0;
     position: relative;
 }
 
-.tree {
+.stack-tree {
     margin: 0 0 1em;
     text-align: center;
 }
-.tree,
-.tree ul {
+.stack-tree,
+.stack-tree ul {
     display: table;
 }
-.tree ul {
+.stack-tree ul {
     width: 100%;
 }
-.tree li {
+.stack-tree li {
     display: table-cell;
     padding: .5em 0;
     vertical-align: top;
 }
 /* _________ */
-.tree li:before {
+.stack-tree li:before {
     outline: solid 1px #666;
     content: "";
     left: 0;
@@ -1148,16 +1148,16 @@ USE OR OTHER DEALINGS IN THE SOFTWARE.
     right: 0;
     top: 0;
 }
-.tree li:first-child:before {
+.stack-tree li:first-child:before {
     left: 50%;
 }
-.tree li:last-child:before {
+.stack-tree li:last-child:before {
     right: 50%;
 }
-.tree span.atom,
-.tree span.op,
-.tree span.cell,
-.tree code {
+.stack-tree span.atom,
+.stack-tree span.op,
+.stack-tree span.cell,
+.stack-tree code {
     border: solid .1em #666;
     border-radius: .2em;
     display: inline-block;
@@ -1166,47 +1166,47 @@ USE OR OTHER DEALINGS IN THE SOFTWARE.
     position: relative;
 }
 /* If the tree represents DOM structure. */
-.tree span.atom {
+.stack-tree span.atom {
     border-radius: .5em;
     color: DarkRed;
     background-color: LightCyan;
 }
-.tree code,
-.tree span.op {
+.stack-tree code,
+.stack-tree span.op {
     border-radius: .2em;
     color: Red;
     background-color: LemonChiffon;
 }
 /* | */
-.tree ul:before,
-.tree span.atom:before,
-.tree span.op:before,
-.tree span.cell:before,
-.tree code:before {
+.stack-tree ul:before,
+.stack-tree span.atom:before,
+.stack-tree span.op:before,
+.stack-tree span.cell:before,
+.stack-tree code:before {
     outline: solid 1px #666;
     content: "";
     height: .5em;
     left: 50%;
     position: absolute;
 }
-.tree ul:before {
+.stack-tree ul:before {
     top: -.5em;
 }
-.tree span.atom:before,
-.tree span.op:before,
-.tree span.cell:before,
-.tree code:before {
+.stack-tree span.atom:before,
+.stack-tree span.op:before,
+.stack-tree span.cell:before,
+.stack-tree code:before {
     top: -.55em;
 }
 /* The root node doesn't connect upwards. */
-.tree > li {
+.stack-tree > li {
     margin-top: 0;
 }
-.tree > li:before,
-.tree > li:after,
-.tree > li > span.atom:before,
-.tree > li > span.op:before,
-.tree > li > span.cell:before,
-.tree > li > code:before {
+.stack-tree > li:before,
+.stack-tree > li:after,
+.stack-tree > li > span.atom:before,
+.stack-tree > li > span.op:before,
+.stack-tree > li > span.cell:before,
+.stack-tree > li > code:before {
     outline: none;
 }
